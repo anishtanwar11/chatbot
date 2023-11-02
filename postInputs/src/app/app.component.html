@@ -1,0 +1,24 @@
+<div>
+  <h1>Enter the inputs</h1>
+
+  <form [formGroup]="enterInputs" (ngSubmit)="submit()">
+    <input type="text" formControlName="input" placeholder="Send a message">
+    <button type="submit">Submit</button>
+  </form>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div>
+    <h2 >Users Input Data</h2>
+    <ul>
+      <li *ngFor="let input of inputData">
+        {{ input.input }}
+      </li>
+    </ul>
+  </div>
+  
+</div>
+
